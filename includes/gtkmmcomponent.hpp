@@ -1112,7 +1112,11 @@ void WindowMain::init(void)
         #ifdef __CO_VERSION_DEBUG
             this->set_icon_from_file(  __CO_PROJECT_DIR +"version-control-lrg.png");
         #else
-            this->set_icon_from_file(  ".\\version-control-lrg.png");
+            #ifdef __linux__
+                this->set_icon_from_file(  "./version-control-lrg.png");
+            #else
+                this->set_icon_from_file(  ".\\version-control-lrg.png");
+            #endif
         #endif
        
     }
