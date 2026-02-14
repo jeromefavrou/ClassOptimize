@@ -1,0 +1,14 @@
+Source: classoptimize
+Section: utils
+Priority: optional
+Maintainer: Jérôme FAVROU <jerome_favrou@protonmail.com>
+Build-Depends: debhelper (>= 12), cmake, g++
+Standards-Version: 4.5.0
+Homepage: http://tonprojet.example.com
+
+# --- paquet binaire ---
+Package: classoptimize
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Optimisation de classes C++ avec GTKMM
+ Un petit projet pour démontrer l'optimisation de classes en C++ avec une interface GTKMM.

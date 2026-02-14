@@ -1,0 +1,3 @@
+build/ClassOptimize usr/bin/
+resources/ usr/share/ClassOptimize/
+include/ usr/include/ClassOptimize/
