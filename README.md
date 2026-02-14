@@ -1,43 +1,21 @@
-ClassOptimize 🚀
+# ClassOptimize 🚀
 
-Optimisez vos classes facilement avec ClassOptimize.
+Optimisez vos classes facilement avec **ClassOptimize**.  
 
-📦 Téléchargement du binaire
+---
 
-Téléchargez la dernière version ici :
-Releases GitHub
+## 📦 Téléchargement du binaire
 
-🛠️ Installation via Build & .deb local
+Téléchargez la dernière version ici :  
+[Releases GitHub](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize)
 
-Rendre le script exécutable :
+---
 
-chmod +x BuildAndDebGenScript
+## 🛠️ Installation via Build & .deb local
 
-
-Lancer le script de build et génération du package .deb :
-
-./BuildAndDebGenScript
-
-
-Installer le package .deb généré :
-
-sudo dpkg -i ../classoptimize_1.0-0_amd64.deb
-
-🌐 Installation sur Ubuntu via PPA
-
-Ajouter le dépôt PPA :
-
-sudo add-apt-repository ppa:jeromefavrou/classoptimize
-
-
-Mettre à jour la liste des paquets :
-
-sudo apt update
-
-
-Installer ClassOptimize :
-
-sudo apt install classoptimize
-
-
-💡 Astuce : après l'installation, vous pouvez lancer classoptimize depuis le terminal pour vérifier que tout fonctionne correctement. "ClassOptimize"
+1. Rendre le script exécutable :  
+   ```bash
+   chmod +x BuildAndDebGenScript
+2. Lancer le script de build et génération du package .deb :
+   ```bash
+   ./BuildAndDebGenScript
