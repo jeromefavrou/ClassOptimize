@@ -7,4 +7,5 @@ https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize
 
 
 1 : chmod +x BuildAndDebGenScript
+
 2 : ./BuildAndDebGenScript
