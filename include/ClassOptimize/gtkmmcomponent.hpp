@@ -1114,7 +1114,7 @@ void WindowMain::init(void)
             this->set_icon_from_file(  __CO_PROJECT_DIR +"version-control-lrg.png");
         #else
             #ifdef __linux__
-                this->set_icon_from_file(  "../resources/icons/version-control-lrg.png");
+                this->set_icon_from_file(  "/usr/share/ClassOptimize/icons/version-control-lrg.png");
             #else
                 this->set_icon_from_file(  "..\\resources\\icons\\version-control-lrg.png");
             #endif
