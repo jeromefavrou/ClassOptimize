@@ -19,6 +19,7 @@ Téléchargez la dernière version ici :
    sudo add-apt-repository ppa:jeromefavrou/classoptimize
    sudo apt update
    sudo apt install classoptimize
+   ClassOptimize
    
 
 ---
@@ -29,4 +30,5 @@ Téléchargez la dernière version ici :
    chmod +x BuildAndDebGenScript
    ./BuildAndDebGenScript
    sudo dpkg -i ../classoptimize_1.0-0_amd64.deb
+   ClassOptimize
    
