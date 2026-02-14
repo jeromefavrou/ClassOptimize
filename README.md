@@ -14,6 +14,8 @@ Téléchargez la dernière version ici :
 
 1. Ajouter depuis le dépôt PPA :  
    ```bash
+   sudo mkdir -p /etc/apt/keyrings
+   curl -fsSL https://github.com/jeromefavrou/ClassOptimize/raw/refs/heads/main/pubKey.gpg | sudo tee /etc/apt/keyrings/pubKeyClassOptimize.gpg > /dev/null
    sudo add-apt-repository ppa:jeromefavrou/classoptimize
    sudo apt update
    sudo apt install classoptimize
