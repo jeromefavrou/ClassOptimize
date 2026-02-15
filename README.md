@@ -1,6 +1,16 @@
 # ClassOptimize 🚀
 
-Optimisez vos classes facilement avec **ClassOptimize**.  
+✏️  Outils pour la classe 
+🎲 Gestion de groupes / ateliers
+
+
+créer groupes équilibrés.
+
+contraintes (niveau, comportement, affinités)
+
+génération rapide de groupes.
+
+👉 Pas IA : Simple Algorithme Génétique.
 
 ---
 
