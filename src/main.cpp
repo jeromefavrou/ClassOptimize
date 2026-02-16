@@ -33,7 +33,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #define __CO_VERSION_ARCH 64
 #define __CO_VERSION_MAJOR 1
-#define __CO_VERSION_MINOR 0
+#define __CO_VERSION_MINOR 1
 #define __CO_VERSION_PART 0
 
 //#define __CO_VERSION_DEBUG
@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     #define  __CO_PROJECT_DIR std::string("C:\\Users\\Rigel85\\Desktop\\GenGrp\\")
 #endif
 
-#include "../include/ClassOptimize/gtkmmcomponent.hpp"
+#include "../include/ClassOptimize/WindowMain.hpp"
 
 
 int main(int argc, char *argv[]) 
@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
 
     try
     {
-
         Genetique::genitiqueSharedClass genetiqueInst;
 
         //definition des parametre par défaut de l'algorithme
