@@ -17,8 +17,8 @@ génération rapide de groupes.
 ## 📦 Téléchargement du binaire
 
 Téléchargez la dernière version ici :  
-[Releases GitHub](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize)
-
+[Releases GitHub V1.0 ( Windows ) ](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize)
+[Releases GitHub V1.1 ( Linux seulement ) ]([https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize_1.1-0.jammy_amd64))
 ---
 ## 🛠️ Installation sur Ubuntu via PPA
 
