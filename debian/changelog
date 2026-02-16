@@ -1,3 +1,9 @@
+classoptimize (1.1-0~jammy) jammy; urgency=medium
+
+  * version compatible  Jammy
+
+ -- favrou (pgp classOptimize) <jerome_favrou@protonmail.com>  Mon, 16 Feb 2026 10:17:51 +0100
+
 classoptimize (1.0-0~jammy2) jammy; urgency=medium
 
   * Première version compatible Jammy
