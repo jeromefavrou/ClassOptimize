@@ -330,4 +330,32 @@ void LogicExceptionDialog::show( std::string const & _titre = "Erreur" )const
     dialog.run();
 }
 
+
+/// @brief classe pour la gestion de l'import et de l'export des données au format csv
+
+class CSVDialog : public Gtk::FileChooserDialog
+{
+    public:
+        CSVDialog(Gtk::Window& parent , Gtk::FileChooserAction action = Gtk::FILE_CHOOSER_ACTION_OPEN);
+        
+    private:
+};
+
+CSVDialog::CSVDialog(Gtk::Window& parent , Gtk::FileChooserAction action) : Gtk::FileChooserDialog(parent , "Choisir un fichier" , action)
+{
+    auto filter = Gtk::FileFilter::create();
+    filter->set_name("Fichiers CSV");
+    filter->add_pattern("*.csv");
+    this->add_filter(filter);
+
+    // Boutons
+    this->add_button("_Annuler", Gtk::RESPONSE_CANCEL);
+    if( action == Gtk::FILE_CHOOSER_ACTION_OPEN )
+        this->add_button("_Ouvrir", Gtk::RESPONSE_OK);
+    else
+        this->add_button("_Enregistrer", Gtk::RESPONSE_OK);
+
+}
+
+
 #endif
