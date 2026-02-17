@@ -1,0 +1,9 @@
+build/
+*linux-gnu/
+.vscode/
+*.log
+debian/*.substvars
+debian/debhelper-build-stamp
+debian/classoptimize
+debian/files
+debian/*.debhelper
