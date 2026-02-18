@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ClassOptimize
-Upstream-Contact: rigel85@example.com
-Source: https://launchpad.net/~rigel85/+archive/ubuntu/ppa
+Upstream-Contact: jerome_favrou@protonmail.com
+Source: https://github.com/jeromefavrou/ClassOptimize
 
 Files: *
 Copyright: 2024 Favrou Jérôme
