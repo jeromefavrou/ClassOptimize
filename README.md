@@ -20,7 +20,7 @@ Téléchargez la dernière version ici :
 
 [Releases GitHub V1.0 ( Windows ) ](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize)
 ---
-[Releases GitHub V1.1 ( Linux seulement ) ](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize_1.1-0.jammy_amd64)
+[Releases GitHub V1.1 ( Linux seulement amd64 & arm32 ) ](https://github.com/jeromefavrou/ClassOptimize/releases/tag/ClassOptimize_1.1-0.jammy_amd64)
 ---
 
 ![Description de l'image](/data/PictPr%C3%A9sentation.png)
