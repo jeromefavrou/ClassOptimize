@@ -12,6 +12,8 @@ génération rapide de groupes.
 
 👉 Pas IA : Simple Algorithme Génétique.
 
+Une version compatible debian arm32 ( Rasberry-pi )
+
 ---
 
 ## 📦 Téléchargement du binaire
@@ -25,7 +27,7 @@ Téléchargez la dernière version ici :
 
 ![Description de l'image](/data/PictPr%C3%A9sentation.png)
 ---
-## 🛠️ Installation sur Ubuntu via PPA
+## 🛠️ Installation sur Ubuntu  via PPA
 
 1. Ajouter depuis le dépôt PPA :  
    ```bash
@@ -44,6 +46,6 @@ Téléchargez la dernière version ici :
    ```bash
    chmod +x BuildAndDebGenScript
    ./BuildAndDebGenScript
-   sudo dpkg -i ../classoptimize_1.0-0_amd64.deb
+   sudo dpkg -i ../classoptimize_VERSION_ARCHITECTURE.deb
    ClassOptimize
    
