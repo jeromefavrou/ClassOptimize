@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Jérôme FAVROU <jerome_favrou@protonmail.com>
 Build-Depends: debhelper (>= 12), cmake, g++, libgtkmm-3.0-dev, libglibmm-2.4-dev, libsigc++-2.0-dev
 Standards-Version: 4.5.0
-Homepage: http://tonprojet.example.com
+Homepage: https://github.com/jeromefavrou/ClassOptimize
 
 # --- paquet binaire ---
 Package: classoptimize
