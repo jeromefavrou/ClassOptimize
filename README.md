@@ -27,7 +27,7 @@ Téléchargez la dernière version ici :
 
 ![Description de l'image](/data/PictPr%C3%A9sentation.png)
 ---
-## 🛠️ Installation sur Ubuntu  via PPA
+## 🛠️ Installation sur Ubuntu  via PPA ( amd64 )
 
 1. Ajouter depuis le dépôt PPA :  
    ```bash
