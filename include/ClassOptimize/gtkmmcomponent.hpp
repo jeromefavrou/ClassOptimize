@@ -43,12 +43,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //#include <cairomm-1.0/cairomm/context.h>
 
 
-class ResultatNoteBook : public Gtk::VBox , public Genetique::genitiqueSharedClass
+class ResultatNoteBook : public Gtk::VBox , public Genetique::genitiqueSharedClass, public TemplateGui
 {
     public:
 
-     ResultatNoteBook(Genetique::genitiqueSharedClass const & ref):Gtk::VBox(false , 5) , Genetique::genitiqueSharedClass(ref)
+     ResultatNoteBook(Genetique::genitiqueSharedClass const & ref , Gtk::Window& parent):Gtk::VBox(false , 5) , Genetique::genitiqueSharedClass(ref),TemplateGui()
      {
+        this->m_parent = &parent;
+     
         auto slt = Gtk::manage( new Gtk::HBox());
 
         this->m_solution.signal_changed().connect(sigc::mem_fun(*this,&ResultatNoteBook::solution_change));
@@ -136,6 +138,11 @@ class ResultatNoteBook : public Gtk::VBox , public Genetique::genitiqueSharedCla
         lsc->add(show_grp);
 
         this->pack_start( *ls , Gtk::PACK_EXPAND_WIDGET);
+
+        //ajout d'un bouton export
+        auto exportBp = Gtk::manage( new Gtk::Button("Exporter") );
+        exportBp->signal_clicked().connect(sigc::mem_fun(*this,&ResultatNoteBook::exporter));
+        this->pack_start(*exportBp , Gtk::PACK_SHRINK);
      }
 
      void update()
@@ -158,6 +165,63 @@ class ResultatNoteBook : public Gtk::VBox , public Genetique::genitiqueSharedCla
 
          this->m_solution.set_active(0);
          
+     }
+
+     void exporter()
+     {
+        CSVDialog dialog(*this->m_parent , Gtk::FILE_CHOOSER_ACTION_SAVE );
+
+            int result = dialog.run();
+
+            if (result == Gtk::RESPONSE_OK)
+            {
+                std::string filename = dialog.get_filename();
+
+                if( filename.substr(filename.size() - 4) != ".csv" )
+                {
+                    filename += ".csv";
+                }
+
+                std::ofstream file(filename);
+                
+                if(!file.is_open())
+                {
+                    LogicExceptionDialog popup("Impossible d'ouvrir le fichier en écriture");
+                    popup.show();
+                    return;
+                }
+
+                //exporte tout les groupe de la solution selectionné
+                int idx = this->m_solution.get_active_row_number();
+
+                if(idx < 0)
+                    return ;
+
+                auto const & idv = this->get_resPopulation()->at(idx);
+
+                //list tout les groupe etablie
+                for( auto  & t : *this->get_genAlgo()->get_base_chromosone())
+                {
+                    file << utilitys::findKeyByValue( *this->get_keyChromozone() , (unsigned int)t.get_caract().id ) ;
+
+
+                    ///pour une solution donné liste tout les gene de ce groupe
+                    auto ids = Genetique::Mesure::lsId(this->get_resPopulation()->at(idx) , *this->get_genAlgo()->get_base_chromosone() , (unsigned int)t.get_caract().id-1 );
+                    
+                    for(auto const & id : ids )
+                    {
+                        file << ";" << utilitys::findKeyByValue( *this->get_keyGene()  , id ) ;
+                    }
+
+                    file << std::endl;
+                }
+
+                file << std::endl;
+
+
+                file.close();
+
+            }
      }
 
      void solution_change(void)

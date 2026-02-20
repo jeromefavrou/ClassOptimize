@@ -31,9 +31,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #include <string>
 
-#define __CO_VERSION_ARCH 64
 #define __CO_VERSION_MAJOR 1
-#define __CO_VERSION_MINOR 1
+#define __CO_VERSION_MINOR 2
 #define __CO_VERSION_PART 0
 
 //#define __CO_VERSION_DEBUG
@@ -51,12 +50,12 @@ int main(int argc, char *argv[])
 {
     std::stringstream ss ;
     // affichage de la version en console
-    ss << "version : " << __CO_VERSION_MAJOR <<"." <<__CO_VERSION_MINOR << "." << __CO_VERSION_PART << " " << __CO_VERSION_ARCH << " bits : " ;
+    ss << "version : " << __CO_VERSION_MAJOR <<"." <<__CO_VERSION_MINOR << "." << __CO_VERSION_PART ;
 
     #ifdef __CO_VERSION_RELEASE
-        ss << "RELEASE"<< std::endl;
+        ss << " RELEASE"<< std::endl;
     #else
-        ss << "DEBUG"<< std::endl;
+        ss << " DEBUG"<< std::endl;
     #endif
 
     std::string vers("");
